@@ -53,8 +53,9 @@ edit pgbouncer config /etc/pgbouncer/pgbouncer.ini and change settings as needed
     auth_file = /etc/pgbouncer/userlist.txt
     admin_users = postgres
     stats_users = postgres,root
-
+    
 Download and install node 0.8.9 from github
+
     git clone git://github.com/joyent/node.git node0.8.9
     cd node0.8.9
     git checkout v0.8.9
