@@ -54,7 +54,14 @@ edit pgbouncer config /etc/pgbouncer/pgbouncer.ini and change settings as needed
     admin_users = postgres
     stats_users = postgres,root
 
-install node 0.8.9 using checkinstall
+Download and install node 0.8.9 from github
+    git clone git://github.com/joyent/node.git node0.8.9
+    cd node0.8.9
+    git checkout v0.8.9
+    ./configure --prefix=/usr/local/node0.8.9
+    make
+    sudo make install
+    cd ..
     
 Get the latest cartodb
 
