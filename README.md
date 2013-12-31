@@ -63,7 +63,29 @@ Download and install node 0.8.9 from github
     make
     sudo make install
     cd ..
+
+Include node to PATH variable
+
+    export PATH="/usr/local/node/bin":"${PATH}"
     
+Link node to node0.8.9
+
+    sudo ln -s /usr/local/node0.8.9 /usr/local/node
+
+Adding/changing /etc/sudoers.d/secure_path:
+
+    Defaults  secure_path=/usr/local/node/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin
+    
+If you had to create the secure_path file, you will need to update the permissions
+
+    sudo su
+    sudo chmod 0440 /etc/sudoers.d/secure_path
+    exit
+    
+Install node-inspector from NPM repository
+
+    npm install node-inspector -g
+
 Get the latest cartodb
 
     git clone --recursive https://github.com/CartoDB/cartodb20.git
